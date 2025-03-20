@@ -1,0 +1,81 @@
+[
+  {
+    "title": "Fanmade Webiste Ella Oshi 😁🩷",
+    "description": "Fanmade Webiste Ella Oshi 😁🩷",
+    "image": "https://images-ext-1.discordapp.net/external/RK-9nZ9p6Y4jvMjjRdbN5XC98scseV4BsotvwrNH1Rg/https/opengraph.githubassets.com/9a37538e51b6058997be97b0d8b02262656e7cdddd67a3a298f61efabde3782b/Typicalsleepingboy/gabriela?format=webp&width=900&height=450",
+    "tags": [
+      "HTML",
+      "Tailwind CSS",
+      "Javascript"
+    ],
+    "liveUrl": "https://ellafanpage.vercel.app/",
+    "githubUrl": "https://github.com/Typicalsleepingboy/gabriela",
+    "id": "ec384ff9-1e47-416f-ae2a-a33293662145"
+  },
+  {
+    "title": "Restfull Api NoteApp",
+    "description": "Backend NoteApp",
+    "image": "https://images-ext-1.discordapp.net/external/wLmtWdaxpx8JFCmtgOr1WII7K2vv0ep6CeBOSNokSxU/https/opengraph.githubassets.com/5e1ff60f7aceb66748c11ac3879f1cc9926ebf047156d7a2d95064d68b9794bd/Typicalsleepingboy/BackEndNoteApp?format=webp&width=900&height=450",
+    "tags": [
+      "Javascript",
+      "Axios",
+      "Mongodb",
+      "Vercel"
+    ],
+    "liveUrl": "https://github.com/Typicalsleepingboy/BackEndNoteApp",
+    "githubUrl": "https://github.com/Typicalsleepingboy/BackEndNoteApp",
+    "id": "e46677c3-4b80-46c5-8c78-d6078470b6cc"
+  },
+  {
+    "title": "48Intens Website",
+    "description": "Fanmade website jkt48, fresh ui, and responsive by 48intens community",
+    "image": "https://images-ext-1.discordapp.net/external/0SF32CYvbrerNRPExnvbWU6DS__J25eY-2DROoSVCSU/https/opengraph.githubassets.com/43d5cff7830407dc7e9fdbe755d83dead26c095eeb4bddbca7e105011973905b/Typicalsleepingboy/finland-miracle?format=webp&width=900&height=450",
+    "tags": [
+      "HTML",
+      "Tailwind CSS",
+      "Javascript",
+      "Framer Motion"
+    ],
+    "liveUrl": "https://48intens.com/",
+    "githubUrl": "https://github.com/Typicalsleepingboy/finland-miracle",
+    "id": "5b3f038e-9716-4271-bc3e-652b63f94df8"
+  },
+  {
+    "title": "Idn api live streaming JKT48 from graphql IDN Live Streaming",
+    "description": "Idn api live streaming JKT48 from graphql IDN Live Streaming",
+    "image": "https://images-ext-1.discordapp.net/external/4QvKCcS4kNA7EOwy_KHci-4flzpRpgWT7tubmROsX2U/https/opengraph.githubassets.com/530081212223ab7aa1786f73d3f7c86c6d8c1d83e5d7f64637a28f1b10e45d11/Typicalsleepingboy/idn-api-by-intens?format=webp&width=900&height=450",
+    "tags": [
+      "Javascript",
+      "Axios"
+    ],
+    "liveUrl": "https://github.com/Typicalsleepingboy/idn-api-by-intens",
+    "githubUrl": "https://github.com/Typicalsleepingboy/idn-api-by-intens",
+    "id": "7c0e4ad7-dfb8-4dab-afab-3ca10412a26e"
+  },
+  {
+    "title": "Showroom api live streaming only JKT48",
+    "description": "showroom api live streaming jkt48",
+    "image": "https://images-ext-1.discordapp.net/external/LUdmNgYiayRk3caqwPUPCwbC4eCgfjDLac-ce9pSC14/https/opengraph.githubassets.com/978fa84350048284b2e9d573525cc89d6eea63aaedc8102f2039626cac1575f6/Typicalsleepingboy/showroom-api-by-intens?format=webp&width=900&height=450",
+    "tags": [
+      "Javascript",
+      "Axios",
+      "Express"
+    ],
+    "liveUrl": "https://showroom-api-by-intens.vercel.app",
+    "githubUrl": "https://github.com/Typicalsleepingboy/showroom-api-by-intens",
+    "id": "f1e66a11-9e15-413c-baa6-093742b12780"
+  },
+  {
+    "title": "Jekate48 Webiste",
+    "description": "Fanmade Basic Webiste JKT48 by Typicalsleepingboy ⏳🚧",
+    "image": "https://images-ext-1.discordapp.net/external/YPwk1uKv0S0CEnVM_3-2Z5LCAWZS9-1DCV02yIslnQk/https/opengraph.githubassets.com/29d95c0d4a20a855b67d3257aa3823a855c69c25bc0a48fc5f17421df0bf593e/Typicalsleepingboy/jekate48?format=webp&width=900&height=450",
+    "tags": [
+      "HTML",
+      "Tailwind CSS",
+      "Javascript"
+    ],
+    "liveUrl": "https://jekate48.site/",
+    "githubUrl": "https://github.com/Typicalsleepingboy/jekate48",
+    "id": "0d89cff2-87e2-46be-b3c5-0b90c28c3f76"
+  }
+]
