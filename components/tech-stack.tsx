@@ -12,7 +12,7 @@ export function TechStack() {
     { name: "Tailwind CSS", icon: "tailwind" },
     { name: "Discord", icon: "discordjs" },
     { name: "Flutter", icon: "flutter" },
-    { name: "Figma", icon: "figmap" },
+    { name: "Figma", icon: "figma" },
     { name: "Postman", icon: "postman" },
     { name: "Express", icon: "express" },
     { name: "Firebase", icon: "firebase" },
