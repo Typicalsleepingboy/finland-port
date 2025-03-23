@@ -5,8 +5,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Typicalsleepingboyxxx",
-  description: "Made by love Typicalsleepingboy"
-}
+  description: "Made by love Typicalsleepingboy",
+  icons: "/sadface.ico" 
+};
+
 
 export default function RootLayout({
   children,

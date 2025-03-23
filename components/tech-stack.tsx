@@ -12,8 +12,12 @@ export function TechStack() {
     { name: "Tailwind CSS", icon: "tailwind" },
     { name: "Discord", icon: "discordjs" },
     { name: "Flutter", icon: "flutter" },
+    { name: "Figma", icon: "figmap" },
     { name: "Postman", icon: "postman" },
-    { name: "Node.js", icon: "nodejs" },
+    { name: "Express", icon: "express" },
+    { name: "Firebase", icon: "firebase" },
+    { name: "Next.js", icon: "nextjs" },
+    { name: "Node.js", icon: "nodejs" }
   ]
 
   const container = {
