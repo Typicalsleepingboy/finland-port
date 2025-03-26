@@ -15,6 +15,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { addProject } from "@/lib/projects"
 import { DotBackground } from "@/components/dot-background"
 
+// Define the project schema with proper types
 const projectSchema = z.object({
   title: z.string().min(3, { message: "Title must be at least 3 characters" }),
   description: z.string().min(10, { message: "Description must be at least 10 characters" }),
@@ -25,6 +26,17 @@ const projectSchema = z.object({
 })
 
 type ProjectFormValues = z.infer<typeof projectSchema>
+
+// Define the Project interface to match the expected types
+interface Project {
+  id: string
+  title: string
+  description: string
+  image: string
+  tags: string[] // This is an array of strings
+  liveUrl?: string
+  githubUrl?: string
+}
 
 export default function AdminPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -46,10 +58,15 @@ export default function AdminPage() {
   async function onSubmit(data: ProjectFormValues) {
     setIsSubmitting(true)
     try {
-      const projectData = {
-        ...data,
+      // Create a project object with the correct types
+      const projectData: Project = {
         id: uuidv4(),
+        title: data.title,
+        description: data.description,
         image: data.image || "/placeholder.svg?height=200&width=400",
+        tags: data.tags, // This is already transformed to string[] by zod
+        liveUrl: data.liveUrl || undefined,
+        githubUrl: data.githubUrl || undefined,
       }
 
       await addProject(projectData)
@@ -62,6 +79,7 @@ export default function AdminPage() {
       form.reset()
       router.refresh()
     } catch (error) {
+      console.error("Error adding project:", error)
       toast({
         title: "Error",
         description: "Failed to add project. Please try again.",
