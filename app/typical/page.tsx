@@ -15,7 +15,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { addProject } from "@/lib/projects"
 import { DotBackground } from "@/components/dot-background"
 
-// Define the project schema with proper types
+
 const projectSchema = z.object({
   title: z.string().min(3, { message: "Title must be at least 3 characters" }),
   description: z.string().min(10, { message: "Description must be at least 10 characters" }),
@@ -34,7 +34,7 @@ interface Project {
   title: string
   description: string
   image: string
-  tags: string[] // Changed from (string | undefined)[]
+  tags: string[] 
   liveUrl?: string
   githubUrl?: string
 }
@@ -64,7 +64,7 @@ export default function AdminPage() {
         title: data.title,
         description: data.description,
         image: data.image || "/placeholder.svg?height=200&width=400",
-        tags: data.tags || [], // Ensure tags is always an array
+        tags: data.tags || [],
         liveUrl: data.liveUrl || undefined,
         githubUrl: data.githubUrl || undefined,
       };
