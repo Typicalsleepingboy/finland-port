@@ -7,7 +7,7 @@ import { TechStack } from "@/components/tech-stack"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { getProjects } from "@/lib/projects"
-
+import "@/app/globals.css"
 
 export default async function Home() {
   const projects = await getProjects()
