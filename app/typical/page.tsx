@@ -20,20 +20,21 @@ const projectSchema = z.object({
   title: z.string().min(3, { message: "Title must be at least 3 characters" }),
   description: z.string().min(10, { message: "Description must be at least 10 characters" }),
   image: z.string().url({ message: "Please enter a valid URL" }).optional(),
-  tags: z.string().transform((val) => val.split(",").map((tag) => tag.trim())),
+  tags: z.string().transform((val) => 
+    val === "" ? [] : val.split(",").map((tag) => tag.trim()).filter(Boolean)
+  ),  
   liveUrl: z.string().url({ message: "Please enter a valid URL" }).optional().or(z.literal("")),
   githubUrl: z.string().url({ message: "Please enter a valid URL" }).optional().or(z.literal("")),
 })
 
 type ProjectFormValues = z.infer<typeof projectSchema>
 
-// Define the Project interface to match the expected types
 interface Project {
   id: string
   title: string
   description: string
   image: string
-  tags: string[] // This is an array of strings
+  tags: string[] // Changed from (string | undefined)[]
   liveUrl?: string
   githubUrl?: string
 }
@@ -49,44 +50,47 @@ export default function AdminPage() {
       title: "",
       description: "",
       image: "",
-      tags: "",
+      tags: [],
       liveUrl: "",
       githubUrl: "",
     },
   })
 
   async function onSubmit(data: ProjectFormValues) {
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     try {
-      // Create a project object with the correct types
       const projectData: Project = {
         id: uuidv4(),
         title: data.title,
         description: data.description,
         image: data.image || "/placeholder.svg?height=200&width=400",
-        tags: data.tags, // This is already transformed to string[] by zod
+        tags: data.tags || [], // Ensure tags is always an array
         liveUrl: data.liveUrl || undefined,
         githubUrl: data.githubUrl || undefined,
+      };
+  
+      const result = await addProject(projectData);
+  
+      if (!result.success) {
+        throw new Error(result.error || "Failed to add project");
       }
-
-      await addProject(projectData)
-
+  
       toast({
         title: "Project Added",
         description: "Your project has been successfully added to the portfolio",
-      })
-
-      form.reset()
-      router.refresh()
+      });
+  
+      form.reset();
+      router.refresh();
     } catch (error) {
-      console.error("Error adding project:", error)
+      console.error("Error adding project:", error);
       toast({
         title: "Error",
-        description: "Failed to add project. Please try again.",
+        description: error instanceof Error ? error.message : "Failed to add project",
         variant: "destructive",
-      })
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
 
